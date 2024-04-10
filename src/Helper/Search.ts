@@ -15,7 +15,7 @@ export async function courseById(
   const course: InstructorCourse = await getDocumentById(index, courseId);
   return course;
 }
-
+//help
 export async function courseSearch(
   searchQuery: string,
   paginate: IPaginateProps,
