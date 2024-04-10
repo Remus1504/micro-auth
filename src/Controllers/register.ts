@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 
-import { newRegisterSchema } from '../schema/register';
+import { signupSchema } from '../schema/register';
 import {
   createAuthUser,
   getUserByUsernameOrEmail,
@@ -13,7 +13,7 @@ import {
   firstLetterUppercase,
   lowerCase,
   uploads,
-} from '@remus1504/micrograde';
+} from '@remus1504/micrograde-shared';
 import { Request, Response } from 'express';
 import { v4 as uuidV4 } from 'uuid';
 import { UploadApiResponse } from 'cloudinary';
@@ -23,7 +23,7 @@ import { newAuthChannel } from '../server';
 import { StatusCodes } from 'http-status-codes';
 
 export async function create(req: Request, res: Response): Promise<void> {
-  const { error } = await Promise.resolve(newRegisterSchema.validate(req.body));
+  const { error } = await Promise.resolve(signupSchema.validate(req.body));
   if (error?.details) {
     throw new BadRequestError(
       error.details[0].message,

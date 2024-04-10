@@ -1,5 +1,5 @@
 import { getUserByUsername, signToken } from '../Helper/Authentication';
-import { IAuthDocument } from '@remus1504/micrograde';
+import { IAuthDocument } from '@remus1504/micrograde-shared';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 

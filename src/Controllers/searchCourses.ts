@@ -1,5 +1,5 @@
 import { courseById, courseSearch } from '../Helper/Search';
-import { IPaginateProps, ISearchResult } from '@remus1504/micrograde';
+import { IPaginateProps, ISearchResult } from '@remus1504/micrograde-shared';
 import { Request, Response } from 'express';
 import { sortBy } from 'lodash';
 import { StatusCodes } from 'http-status-codes';

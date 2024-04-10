@@ -16,7 +16,7 @@ import {
   BadRequestError,
   IAuthDocument,
   IEmailMessageDetails,
-} from '@remus1504/micrograde';
+} from '@remus1504/micrograde-shared';
 import { Request, Response } from 'express';
 import { config } from '../configuration';
 import { publishDirectMessage } from '../queues/producer';

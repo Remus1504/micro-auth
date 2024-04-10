@@ -3,7 +3,7 @@ import {
   getAuthUserByVerificationToken,
   updateVerifyEmailField,
 } from '../Helper/Authentication';
-import { BadRequestError, IAuthDocument } from '@remus1504/micrograde';
+import { BadRequestError, IAuthDocument } from '@remus1504/micrograde-shared';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 

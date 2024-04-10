@@ -1,4 +1,4 @@
-import { winstonLogger as createLogger } from '@remus1504/micrograde';
+import { winstonLogger as createLogger } from '@remus1504/micrograde-shared';
 import { Logger } from 'winston';
 import { config as appConfig } from './configuration';
 import { Sequelize as MicroGradeSequelize } from 'sequelize';

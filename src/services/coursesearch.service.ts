@@ -8,7 +8,7 @@ import {
   InstructorCourse,
 } from '@remus1504/micrograde-shared';
 
-export async function courseById(
+export async function gigById(
   index: string,
   courseId: string,
 ): Promise<InstructorCourse> {
@@ -16,10 +16,10 @@ export async function courseById(
   return course;
 }
 
-export async function courseSearch(
+export async function coursesSearch(
   searchQuery: string,
   paginate: IPaginateProps,
-  deliveryTime?: string,
+  startDate?: string,
   min?: number,
   max?: number,
 ): Promise<ISearchResult> {
@@ -47,11 +47,11 @@ export async function courseSearch(
     },
   ];
 
-  if (deliveryTime !== 'undefined') {
+  if (startDate !== 'undefined') {
     queryList.push({
       query_string: {
         fields: ['expectedDuration'],
-        query: `*${deliveryTime}*`,
+        query: `*${startDate}*`,
       },
     });
   }

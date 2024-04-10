@@ -10,7 +10,7 @@ import {
   IAuthDocument,
   IEmailMessageDetails,
   lowerCase,
-} from '@remus1504/micrograde';
+} from '@remus1504/micrograde-shared';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { config } from '../configuration';

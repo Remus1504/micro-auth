@@ -5,7 +5,7 @@ import {
   IAuthPayload,
   IErrorResponse,
   winstonLogger,
-} from '@remus1504/micrograde';
+} from '@remus1504/micrograde-shared';
 import { Logger } from 'winston';
 import { config } from './configuration';
 import {
@@ -40,7 +40,7 @@ export function start(newApp: Application): void {
   newStandardMiddleware(newApp);
   newRoutesMiddleware(newApp);
   startQueues();
-  //startElasticSearch();
+  startElasticSearch();
   newAuthErrorHandler(newApp);
   startNewServer(newApp);
 }
@@ -83,10 +83,10 @@ async function startQueues(): Promise<void> {
   newAuthChannel = (await createConnection()) as Channel;
 }
 
-/*function startElasticSearch(): void {
+function startElasticSearch(): void {
   checkConnection();
   createIndex('courses');
-} */
+}
 
 function newAuthErrorHandler(newApp: Application): void {
   newApp.use(

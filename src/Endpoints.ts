@@ -1,5 +1,5 @@
 import { Application } from 'express';
-import { verifyGatewayRequest } from '@remus1504/micrograde';
+import { verifyGatewayRequest } from '@remus1504/micrograde-shared';
 import { authRoutes } from './Routes/AuthenticationRoutes';
 import { currentUserRoutes } from './Routes/ActiveUser';
 import { healthRoutes } from './Routes/Health';

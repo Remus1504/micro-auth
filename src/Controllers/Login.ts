@@ -5,7 +5,11 @@ import {
   getUserByUsername,
   signToken,
 } from '../Helper/Authentication';
-import { BadRequestError, IAuthDocument, isEmail } from '@remus1504/micrograde';
+import {
+  BadRequestError,
+  IAuthDocument,
+  isEmail,
+} from '@remus1504/micrograde-shared';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { omit } from 'lodash';

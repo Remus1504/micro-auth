@@ -1,5 +1,5 @@
 import { customSequelize } from '../DBconnection';
-import { IAuthDocument } from '@remus1504/micrograde';
+import { IAuthDocument } from '@remus1504/micrograde-shared';
 import { compare, hash } from 'bcryptjs';
 import { DataTypes, Model, ModelDefined, Optional } from 'sequelize';
 

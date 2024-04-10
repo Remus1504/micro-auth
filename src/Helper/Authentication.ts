@@ -8,7 +8,7 @@ import {
   firstLetterUppercase,
   lowerCase,
   winstonLogger,
-} from '@remus1504/micrograde';
+} from '@remus1504/micrograde-shared';
 import { sign } from 'jsonwebtoken';
 import { omit } from 'lodash';
 import { Model, Op } from 'sequelize';
